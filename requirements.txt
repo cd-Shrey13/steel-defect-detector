@@ -1,0 +1,28 @@
+# Core
+numpy
+pandas
+matplotlib
+opencv-python
+
+# Deep Learning (choose one)
+tensorflow  # OR
+# torch torchvision torchaudio
+
+# Image Augmentation (optional but useful)
+imgaug
+scikit-image
+
+# Model evaluation
+scikit-learn
+
+# UI (choose one)
+streamlit  # simple UI
+# flask  # for custom backend + frontend
+
+# Utils
+tqdm
+opencv-python-headless
+
+fpdf
+Pillow
+streamlit-webrtc
