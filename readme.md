@@ -85,16 +85,15 @@ Deploy easily using [Streamlit Cloud](https://share.streamlit.io):
 ### 📁 Dataset
 
 We used the **NEU Surface Defect Dataset**. You can download it from <a href='https://www.kaggle.com/datasets/kaustubhdikshit/neu-surface-defect-database'>Here</a>
-```
-
----
 
 ### 🎓 Technologies Used
 
+```bash
 * TensorFlow / Keras
 * Streamlit
 * Grad-CAM (XAI)
 * OpenCV
 * Python (FPDF, NumPy, PIL)
+```
 
 
