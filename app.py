@@ -9,11 +9,22 @@ import matplotlib.cm as cm
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 from datetime import datetime
 import os
+from keras.layers import DepthwiseConv2D
+
+def patched_depthwise_conv2d(*args, **kwargs):
+    kwargs.pop('groups', None)  # remove unsupported arg
+    return DepthwiseConv2D(*args, **kwargs)
 
 
 # Model & labels
 MODEL_PATH = "model/steel_defect_classifier.h5"
-model = tf.keras.models.load_model(MODEL_PATH)
+custom_objects = {"DepthwiseConv2D": patched_depthwise_conv2d}
+
+model = tf.keras.models.load_model(
+    "model/steel_defect_classifier.h5",
+    custom_objects=custom_objects
+)
+
 class_names = ['crazing', 'inclusion', 'patches', 'pitted_surface', 'rolled-in-scale', 'scratches']
 
 # Grad-CAM function
