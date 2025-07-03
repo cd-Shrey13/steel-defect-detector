@@ -1,5 +1,7 @@
-numpy==1.26.4
-tensorflow==2.14.0
+numpy==1.26.4          
+tensorflow==2.14.0     
+
+# your other packages
 streamlit
 opencv-python-headless
 Pillow
